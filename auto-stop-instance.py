@@ -21,7 +21,7 @@ notebook_instance_name = 'test-notebook-lcc'
 
 while True:
     cpu_util = get_cpu_utilization()
-    if cpu_util > 50:
+    if cpu_util > 1:
         notebook_status = get_notebook_status(notebook_instance_name)
 
         if notebook_status == 'InService':
