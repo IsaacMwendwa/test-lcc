@@ -15,7 +15,7 @@ get_notebook_status() {
 # Main loop to check CPU utilization and stop the instance if needed
 while true; do
     cpu_util=$(get_cpu_utilization)
-    if (( $(echo "$cpu_util > 50" | bc -l) )); then
+    if (( $(echo "$cpu_util > 1" | bc -l) )); then
         notebook_status=$(get_notebook_status)
 
         if [ "$notebook_status" == "InService" ]; then
